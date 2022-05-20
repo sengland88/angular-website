@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+section {
+    color: #1a1a1a;
+    background-color: #99CDE4; 
+    padding: 5px
+}
