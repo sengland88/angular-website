@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="row rowSpacing justify-content-center">
+        <div *ngFor="let skill of skills" class="col-4 mb-4 pb-4 text-center">
+                <img class="img-fluid theProject" [src]="skill.image" [alt]="skill.name">
+                <h3>{{ skill.name }}</h3>
+        </div>
+    </div>
+</div>

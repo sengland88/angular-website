@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
     {
         name: "Valencia Recognition App",
         image: "assets/images/valencia.jpg",
