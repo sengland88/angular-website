@@ -4,5 +4,10 @@
 section {
     color: #1a1a1a;
     background-color: #99CDE4; 
-    padding: 5px
+    padding: 0.3125rem
+}
+
+.rowSpacing {
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
 }
