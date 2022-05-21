@@ -28,14 +28,17 @@
     </div>
   </div>
 
-  <div
-    class="row rowSpacing d-flex justify-content-center"
-    id="projectsDiv"
-  >
-  <div *ngFor="let project of projects" class="col-4 mb-4 pb-4 text-center">
-      <img [src]="project.image" [alt]="project.name" class="img-fluid theProject">
+  <div class="row rowSpacing d-flex justify-content-center" id="projectsDiv">
+    <div *ngFor="let project of projects" class="col-4 mb-4 pb-4 text-center">
+      <img
+        [src]="project.thumbnail"
+        [alt]="project.name"
+        class="img-fluid theProject"
+      />
       <h3>{{ project.name }}</h3>
-      <button class="btn btn-outline-dark theProject buttonColor">Learn More</button>
+      <button class="btn btn-outline-dark theProject buttonColor" (click)="openProjectModal(project)">
+        Learn More
+      </button>
+    </div>
   </div>
-</div>
 </div>

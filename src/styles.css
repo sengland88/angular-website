@@ -5,6 +5,12 @@ body {
     font-family: 'Buda', cursive;  
 }
 
+h3 {
+    margin-top: 0.7813rem;
+    margin-bottom: 0.7813rem;
+    font-weight: bold;
+}
+
 section {
     color: #1a1a1a;
     background-color: #99CDE4; 
@@ -14,4 +20,16 @@ section {
 .rowSpacing {
     margin-top: 3.125rem;
     margin-bottom: 3.125rem;
+}
+
+footer {
+    background-color: #E9E9E9;
+}
+
+.carousel-item {
+	transition: -webkit-transform 0.5s ease;
+	transition: transform 0.5s ease;
+	transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+	-webkit-backface-visibility: visible;
+	        backface-visibility: visible;
 }

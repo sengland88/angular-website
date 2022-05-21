@@ -1,0 +1,45 @@
+    <div class="container">
+      <div
+        *ngIf="!contact"
+        class="row rowSpacing"
+        id="aboutMe"
+        data-aos="zoom-in-right"
+        data-aos-duration="750"
+      >
+        <div class="col-sm">
+          <img
+            src="assets/images/heart.png"
+            class="img-fluid"
+            alt="Responsive image"
+          />
+        </div>
+
+        <div class="col-sm">
+          <h3>Let's Make Something Great!</h3>
+
+          <p>
+            A creatively-charged communication professional turned web and
+            software developer, I’m not only trained in project management and
+            organizational communication, but I’m also equipped with the
+            technical know-how to turn creative concepts into reality. Skilled
+            in HTML, CSS, JavaScript, JQuery, API, AJAX and JSON,React.js,
+            node.js, express.js, as well as express-handlebars, MySQL, MongoDB
+            I’m bolstering my technical proficiency by pursuing a certificate in
+            web and software development from the University of Central Florida
+            (UCF). This is in addition to my already earned bachelor’s degree in
+            interdisciplinary studies from UCF, which serves as my foundation as
+            an adaptable and innovative technical communications professional.
+          </p>
+
+          <p>
+            You can download a copy of my resume by
+            <a href="http://bit.ly/2SXGBD5" target="blank">clicking here</a>.
+          </p>
+
+          <button type="button" class="btn btn-outline-dark" id="contactBtn" (click)="openForm()">
+            Contact Me
+          </button>
+        </div>
+      </div>
+      <app-contact-form *ngIf="contact" (submittedForm)="showContactMe()"></app-contact-form>
+    </div>

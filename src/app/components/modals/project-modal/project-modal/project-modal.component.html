@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h5 >{{ project.name }}</h5>
+    <button type="button" class="close" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+  <img class="modal-image" [src]="project.modalImage" [alt]="project.name" />
+  <div>{{ project.description }}</div>
+  <div><label>Skills: </label> {{ project.skills }}</div>
+  <div>
+    To view the code on Github,
+    <a target="_blank" [href]="project.github">click here</a>.
+  </div>
+</div>
+<div class="modal-footer">
+  <a target="_blank" class="btn btn-primary" [href]="project.url">{{
+    project.cta
+  }}</a>
+  <button class="btn btn-primary" (click)="close()">Close</button>
+</div>

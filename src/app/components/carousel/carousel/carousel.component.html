@@ -1,13 +1,48 @@
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div *ngFor="let image of carouselImages; let i = index">
-            <div class="carousel-item" ngClass="{{ i === 1 ? 'active' : ''}}">
-                <img
-                  [src]="image.location"
-                  class="d-block w-100 img-fluid"
-                  alt="Responsive image"
-                />
-            </div>          
-        </div>
+<div
+  id="carouselExampleSlidesOnly"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div *ngFor="let image of carouselImages; let i = index">
+      <div class="carousel-item" ngClass="{{ i === 0 ? 'active' : '' }}">
+        <img
+          [src]="image.location"
+          class="d-block w-100 img-fluid"
+          alt="Responsive image"
+        />
+      </div>
     </div>
   </div>
+</div>
+
+<!-- this doesnt work right now -->
+<!-- <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="carouselImages[0].location" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="carouselImages[1].location" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="carouselImages[2].location" alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel> -->

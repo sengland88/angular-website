@@ -1,0 +1,69 @@
+<div
+  class="row rowSpacing"
+  id="contactMe"
+  data-aos="zoom-in-right"
+  data-aos-duration="750"
+>
+  <div class="col-sm">
+    <img
+      src="assets/images/heart_2.png"
+      class="img-fluid"
+      alt="Responsive image"
+    />
+  </div>
+
+  <div class="col-sm">
+    <h3>I'm Looking Forward to Connecting With You!</h3>
+
+    <p>
+      Please complete the form below. Once received, I will be in contact with
+      you within 24 hours.
+    </p>
+
+    <p>
+      You can download a copy of my resume by
+      <a href="http://bit.ly/2SXGBD5" target="blank">clicking here</a>.
+    </p>
+
+    <form target="blank" [formGroup]="contactForm">
+      <div class="form-group">
+        <label for="formGroupExampleInput">Name</label>
+        <input
+          type="text"
+          formControlName="name"
+          class="form-control"
+          placeholder="Name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="email"
+          aria-describedby="emailHelp"
+          placeholder="someone@LetsWorkTogether.com"
+          name="_replyto"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Message</label>
+        <textarea
+          class="form-control"
+          formControlName="message"
+          rows="3"
+          placeholder="Type a Brief Message"
+          name="message"
+        ></textarea>
+      </div>
+      <input
+        class="btn btn-outline-dark"
+        id="contactBtn"
+        type="submit"
+        value="Send"
+        (click)="submitForm()"
+      />
+    </form>
+  </div>
+</div>

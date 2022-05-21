@@ -9,6 +9,15 @@ import { SectionHeaderComponent } from './components/section-header/section-head
 import { PersonalitySectionComponent } from './modules/personality-section/personality-section.component';
 import { TechnicalSectionComponent } from './modules/technical-section/technical-section/technical-section.component';
 import { ProjectsSectionComponent } from './modules/projects-section/projects-section/projects-section.component';
+import { ContactSectionComponent } from './modules/contact-section/contact-section/contact-section.component';
+import { ContactFormComponent } from './components/contact-form/contact-form/contact-form.component';
+import { FooterComponent } from './components/footer/footer/footer.component';
+import { ProjectModalComponent } from './components/modals/project-modal/project-modal/project-modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PersonalityModalComponent } from './components/modals/personality-modal/personality-modal/personality-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,9 +29,18 @@ import { ProjectsSectionComponent } from './modules/projects-section/projects-se
     PersonalitySectionComponent,
     TechnicalSectionComponent,
     ProjectsSectionComponent,
+    ContactSectionComponent,
+    ContactFormComponent,
+    FooterComponent,
+    ProjectModalComponent,
+    PersonalityModalComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
+import { ProjectModalComponent } from 'src/app/components/modals/project-modal/project-modal/project-modal.component';
 import { projects } from 'src/assets/data/projects';
+import { Project } from 'src/models/projects';
 
 @Component({
   selector: 'app-projects-section',
@@ -10,9 +13,20 @@ export class ProjectsSectionComponent implements OnInit {
 
   projects = projects;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  modalOptions: NgbModalOptions = {
+    backdrop: 'static',
+    keyboard: false
   }
 
+  constructor(private activeModal: NgbModal) { }
+
+  ngOnInit(): void {
+    console.log(projects);
+  }
+
+  openProjectModal(project: Project): void {
+    const modalRef = this.activeModal.open(ProjectModalComponent, this.modalOptions);
+
+    modalRef.componentInstance.project = project
+  }
 }
