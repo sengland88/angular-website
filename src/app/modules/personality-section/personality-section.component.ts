@@ -24,8 +24,6 @@ export class PersonalitySectionComponent implements OnInit {
   }
 
   openPersonalityModal(personality: Personality): void {
-    console.log(personality);
-
     const modalRef = this.activeModal.open(PersonalityModalComponent, this.modalOptions);
 
     modalRef.componentInstance.personality = personality;

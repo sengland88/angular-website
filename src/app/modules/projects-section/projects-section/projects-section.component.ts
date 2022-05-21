@@ -21,7 +21,6 @@ export class ProjectsSectionComponent implements OnInit {
   constructor(private activeModal: NgbModal) { }
 
   ngOnInit(): void {
-    console.log(projects);
   }
 
   openProjectModal(project: Project): void {
